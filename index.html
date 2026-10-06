@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MICHELLE — Кофе и еда</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <a href="#" class="logo">MICHELLE</a>
+
+        <nav class="navigation">
+            <a href="#menu">Меню</a>
+            <a href="#about">О нас</a>
+            <a href="#healthy">Здоровое питание</a>
+            <a href="#atmosphere">Атмосфера</a>
+            <a href="#instagram">Instagram</a>
+        </nav>
+
+        <a href="#contacts" class="header-button">В гости</a>
+
+        <button class="menu-button" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- Главный экран -->
+
+        <section class="hero">
+
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="video.mp4" type="video/mp4">
+            </video>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="hero-label">
+                    ЗЕЛЁНЫЙ УГОЛОК<br>
+                    В СЕРДЦЕ ГОРОДА
+                </p>
+
+                <h1>MICHELLE</h1>
+
+                <p class="hero-slogan">
+                    вкусно. легко. с заботой.
+                </p>
+
+                <a href="#menu" class="main-button">
+                    Посмотреть меню
+                    <span>→</span>
+                </a>
+
+            </div>
+
+            <div class="hero-bottom">
+                <span>24 / 7</span>
+                <span>БИШКЕК</span>
+            </div>
+
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+
+        </section>
+
+
+        <!-- О нас -->
+
+        <section class="about section" id="about">
+
+            <div class="about-text">
+
+                <p class="section-label">ФИЛОСОФИЯ MICHELLE</p>
+
+                <h2>
+                    Хорошее самочувствие<br>
+                    начинается с того,<br>
+                    что ты выбираешь.
+                </h2>
+
+                <p class="description">
+                    Натуральные ингредиенты. Продуманные блюда.
+                    Хороший кофе. И немного заботы в каждой детали.
+                </p>
+
+                <a href="#" class="text-link">
+                    Наша история <span>→</span>
+                </a>
+
+            </div>
+
+            <div class="about-images">
+
+                <div class="about-card">
+                    <img src="about-1.jpg" alt="Атмосфера MICHELLE">
+                    <span>Натурально</span>
+                </div>
+
+                <div class="about-card">
+                    <img src="about-2.jpg" alt="Еда MICHELLE">
+                    <span>Сбалансированно</span>
+                </div>
+
+                <div class="about-card">
+                    <img src="about-3.jpg" alt="Стиль MICHELLE">
+                    <span>Осознанно</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Меню -->
+
+        <section class="menu-section section" id="menu">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">НАШЕ МЕНЮ</p>
+
+                    <h2>
+                        Хорошая еда<br>
+                        для хорошего настроения.
+                    </h2>
+
+                </div>
+
+                <div class="menu-tabs">
+                    <button class="active">Кофе</button>
+                    <button>Завтраки</button>
+                    <button>Основное</button>
+                    <button>Десерты</button>
+                    <button>Полезное</button>
+                </div>
+
+            </div>
+
+
+            <div class="menu-slider">
+
+                <button class="slider-button prev">←</button>
+
+                <div class="menu-items">
+
+                    <article class="menu-card">
+
+                        <img src="coffee.jpg" alt="Капучино">
+
+                        <p class="menu-name">Капучино</p>
+
+                        <p class="menu-info">
+                            эспрессо · молоко
+                        </p>
+
+                        <span class="menu-price">
+                            220 сом
+                        </span>
+
+                    </article>
+
+
+                    <article class="menu-card">
+
+                        <img src="coffee1.jpg" alt="Матча латте">
+
+                        <p class="menu-name">Матча латте</p>
+
+                        <p class="menu-info">
+                            матча · молоко
+                        </p>
+
+                        <span class="menu-price">
+                            240 сом
+                        </span>
+
+                    </article>
+
+
+                    <article class="menu-card">
+
+                        <img src="food.jpg" alt="Тост с авокадо">
+
+                        <p class="menu-name">
+                            Тост с авокадо
+                        </p>
+
+                        <p class="menu-info">
+                            авокадо · семена · хлеб
+                        </p>
+
+                        <span class="menu-price">
+                            280 сом
+                        </span>
+
+                    </article>
+
+
+                    <article class="menu-card">
+
+                        <img src="food1.jpg" alt="Баскский чизкейк">
+
+                        <p class="menu-name">
+                            Баскский чизкейк
+                        </p>
+
+                        <p class="menu-info">
+                            сливочный сыр · ваниль
+                        </p>
+
+                        <span class="menu-price">
+                            260 сом
+                        </span>
+
+                    </article>
+
+                </div>
+
+                <button class="slider-button next">→</button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Сделано с заботой -->
+
+        <section class="care">
+
+            <div class="care-overlay"></div>
+
+            <div class="care-content">
+
+                <p class="section-label">
+                    СДЕЛАНО С ЗАБОТОЙ
+                </p>
+
+                <div class="care-list">
+                    <span>01 &nbsp; свежее</span>
+                    <span>02 &nbsp; натуральное</span>
+                    <span>03 &nbsp; сбалансированное</span>
+                    <span>04 &nbsp; вкусное</span>
+                </div>
+
+                <p class="care-signature">
+                    Это MICHELLE.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Здоровое питание -->
+
+        <section class="healthy section" id="healthy">
+
+            <div class="healthy-text">
+
+                <p class="section-label">
+                    С ЗАБОТОЙ О ТЕБЕ
+                </p>
+
+                <h2>
+                    Хорошая еда.<br>
+                    Хорошее самочувствие.
+                </h2>
+
+                <p class="description">
+                    В нашем меню есть полезные, вегетарианские
+                    и веганские блюда, а также варианты без
+                    глютена и лактозы — чтобы каждый мог
+                    выбрать то, что подходит именно ему.
+                </p>
+
+                <a href="#menu" class="dark-button">
+                    Полезное меню
+                </a>
+
+            </div>
+
+
+            <div class="healthy-image">
+
+                <img src="healthy.png" alt="Полезная еда MICHELLE">
+
+            </div>
+
+
+            <div class="healthy-options">
+
+                <span>♡ &nbsp; Веганское</span>
+
+                <span>♡ &nbsp; Вегетарианское</span>
+
+                <span>♡ &nbsp; Без глютена</span>
+
+                <span>♡ &nbsp; Без лактозы</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Атмосфера -->
+
+        <section class="atmosphere section" id="atmosphere">
+
+            <div class="atmosphere-heading">
+
+                <p class="section-label">
+                    АТМОСФЕРА MICHELLE
+                </p>
+
+                <a href="#" class="text-link">
+                    Все фотографии <span>→</span>
+                </a>
+
+            </div>
+
+
+            <div class="atmosphere-gallery">
+
+                <img src="atmosphere-1.jpg" alt="Интерьер MICHELLE">
+
+                <img src="atmosphere-2.jpg" alt="Кофе MICHELLE">
+
+                <img src="atmosphere-3.jpg" alt="Терраса MICHELLE">
+
+                <img src="atmosphere-4.jpg" alt="Десерт MICHELLE">
+
+                <img src="atmosphere-5.jpg" alt="Растения в MICHELLE">
+
+            </div>
+
+
+            <p class="atmosphere-caption">
+                Место, где можно немного замедлиться.
+            </p>
+
+        </section>
+
+
+        <!-- Instagram -->
+
+        <section class="instagram section" id="instagram">
+
+            <div class="instagram-title">
+
+                <p>
+                    ПОЧУВСТВУЙ<br>
+                    АТМОСФЕРУ
+                </p>
+
+                <span>@michelle_bishkek</span>
+
+                <a href="#" class="light-button">
+                    Перейти в Instagram →
+                </a>
+
+            </div>
+
+
+            <div class="instagram-grid">
+
+                <img src="atmosphere-1.jpg" alt="MICHELLE">
+
+                <img src="coffee.jpg" alt="Кофе MICHELLE">
+
+                <img src="atmosphere-2.jpg" alt="MICHELLE">
+
+                <img src="food.jpg" alt="Блюдо MICHELLE">
+
+                <img src="atmosphere-3.jpg" alt="MICHELLE">
+
+                <img src="healthy.png" alt="Полезная еда MICHELLE">
+
+            </div>
+
+        </section>
+
+
+        <!-- Контакты -->
+
+        <section class="contacts section" id="contacts">
+
+            <div class="contacts-info">
+
+                <p class="section-label">
+                    ЗАХОДИ В ГОСТИ
+                </p>
+
+                <h2>MICHELLE</h2>
+
+                <p>
+                    Бишкек, Кыргызстан<br>
+                    Открыто 24 / 7
+                </p>
+
+                <a href="#" class="dark-button">
+                    Открыть карту
+                </a>
+
+
+                <div class="social-links">
+
+                    <a href="#">
+                        Instagram
+                    </a>
+
+                    <a href="#">
+                        Telegram
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-photo">
+
+                <img src="atmosphere-6.jpg" alt="Вход в MICHELLE">
+
+            </div>
+
+
+            <div class="map">
+
+                <span>📍</span>
+
+                <p>Ala-Archa Mall</p>
+
+                <small>
+                    проспект Чынгыза Айтматова, 299В
+                </small>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Подвал -->
+
+    <footer class="footer">
+
+        <a href="#" class="footer-logo">
+            MICHELLE
+        </a>
+
+
+        <nav>
+
+            <a href="#menu">
+                Меню
+            </a>
+
+            <a href="#about">
+                О нас
+            </a>
+
+            <a href="#healthy">
+                Здоровое питание
+            </a>
+
+            <a href="#atmosphere">
+                Атмосфера
+            </a>
+
+            <a href="#instagram">
+                Instagram
+            </a>
+
+        </nav>
+
+
+        <div class="footer-right">
+
+            <span>24 / 7</span>
+
+            <button class="back-top" aria-label="Наверх">
+                ↑
+            </button>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
