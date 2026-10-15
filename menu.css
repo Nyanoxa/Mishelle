@@ -1,0 +1,279 @@
+.menu-page .header {
+    position: relative;
+    background: #263228;
+    color: #fff;
+}
+
+.menu-page-hero {
+    padding: 130px 5% 110px;
+    text-align: center;
+    background: #f4f1e8;
+}
+
+.menu-page-hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(65px, 9vw, 125px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.menu-page-subtitle {
+    margin-top: 25px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    font-style: italic;
+    color: #697066;
+}
+
+.menu-catalog {
+    background: #ebe5d8;
+    min-height: 600px;
+}
+
+.catalog-tabs {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 65px;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 45px 22px;
+}
+
+.catalog-grid .menu-card {
+    min-width: 0;
+}
+
+.catalog-grid .menu-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 800px) {
+    .menu-page-hero {
+        padding: 95px 6% 80px;
+    }
+
+    .menu-page-hero h1 {
+        font-size: 65px;
+    }
+
+    .menu-page-subtitle {
+        font-size: 22px;
+    }
+
+    .catalog-tabs {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .catalog-grid .menu-card {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-grid .menu-card img {
+        height: 350px;
+    }
+}
+
+.catalog-grid .menu-card {
+    animation: cardAppear 0.5s ease both;
+}
+
+.catalog-grid .menu-card img {
+    transition: transform 0.5s ease;
+}
+
+.catalog-grid .menu-card img:hover {
+    transform: scale(1.025);
+}
+
+.catalog-tabs button {
+    transition: color 0.3s ease;
+}
+
+.catalog-tabs button:hover {
+    color: #263228;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Мобильная версия меню */
+
+@media (max-width: 800px) {
+
+    .menu-page .header {
+        position: relative;
+        z-index: 100;
+        background: #263228;
+    }
+
+    .menu-page .menu-button {
+        position: relative;
+        z-index: 102;
+    }
+
+    .menu-page .navigation {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100dvh;
+        padding: 110px 8% 50px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 30px;
+
+        background: #263228;
+        color: #f4f1e8;
+
+        margin: 0;
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: transform .4s ease, visibility .4s;
+        z-index: 101;
+    }
+
+    .menu-page .navigation.open {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    .menu-page .navigation a {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 38px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: none;
+    }
+
+    .menu-page .menu-button span {
+        background: #fff;
+    }
+
+    .menu-page-hero {
+        padding: 85px 6% 75px;
+    }
+
+    .menu-page-hero h1 {
+        font-size: clamp(54px, 12vw, 75px);
+    }
+
+    .menu-page-subtitle {
+        font-size: 21px;
+    }
+
+    .menu-catalog {
+        padding: 70px 6%;
+    }
+
+    .catalog-tabs {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 26px;
+
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+
+        padding: 10px 0 20px;
+        margin-bottom: 35px;
+    }
+
+    .catalog-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .catalog-tabs button {
+        flex-shrink: 0;
+        white-space: nowrap;
+        scroll-snap-align: start;
+    }
+
+    .catalog-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 14px;
+    }
+
+    .catalog-grid .menu-card {
+        min-width: 0;
+    }
+
+    .catalog-grid .menu-card img {
+        height: 240px;
+        margin-bottom: 14px;
+    }
+
+    .catalog-grid .menu-name {
+        font-size: 23px;
+    }
+
+    .catalog-grid .menu-info {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .catalog-grid .menu-price {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .catalog-grid .menu-card img {
+        height: 350px;
+    }
+
+    .catalog-grid .menu-name {
+        font-size: 29px;
+    }
+
+    .menu-page-hero {
+        padding: 75px 6% 65px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .menu-page .navigation,
+    .catalog-grid .menu-card {
+        animation: none;
+        transition: none;
+    }
+}
