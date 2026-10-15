@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Бронирование — MICHELLE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">MICHELLE</a>
+
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="menu.html">Меню</a>
+      <a href="index.html#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="intro">
+      <p class="eyebrow">MICHELLE / RESERVATION</p>
+      <h1>Ваш столик ждёт</h1>
+      <p>Выберите время, загляните в наш зал и найдите своё место.</p>
+    </section>
+
+    <section class="booking-layout">
+
+      <div class="viewer-panel">
+
+        <div class="viewer-heading">
+          <div>
+            <p class="eyebrow">01 / ВЫБОР МЕСТА</p>
+            <h2>Наш зал</h2>
+          </div>
+
+          <span class="viewer-tip">
+            Поверните зал мышью или пальцем
+          </span>
+        </div>
+
+        <div id="scene" aria-label="Интерактивный 3D-план зала"></div>
+
+        <div class="legend">
+          <span><i class="dot free"></i>Свободен (демо)</span>
+          <span><i class="dot chosen"></i>Выбран</span>
+        </div>
+
+        <div class="table-buttons" id="tableButtons"></div>
+
+      </div>
+
+      <form class="booking-form" id="bookingForm">
+
+        <p class="eyebrow">02 / ДЕТАЛИ ВИЗИТА</p>
+        <h2>Бронирование</h2>
+
+        <p class="hint">
+          Выберите столик на 3D-плане или кнопкой под ним.
+        </p>
+
+        <div class="selected-box" id="selectedInfo" aria-live="polite">
+          Столик пока не выбран
+        </div>
+
+        <div class="fields-two">
+
+          <label>
+            Дата
+            <input type="date" id="date" name="date" required>
+          </label>
+
+          <label>
+            Время
+            <input type="time" id="time" name="time" step="60" required>
+          </label>
+
+        </div>
+
+        <label>
+          Количество гостей
+          <input type="number" id="guests" name="guests" min="1" max="20" step="1"
+            placeholder="Введите количество гостей" required>
+        </label>
+
+        <label>
+          Ваше имя
+          <input type="text" name="name" maxlength="80" autocomplete="name" placeholder="Как к вам обращаться" required>
+        </label>
+
+        <label>
+          Телефон
+          <input type="tel" name="phone" autocomplete="tel" pattern="[+0-9 ()-]{7,22}" placeholder="+996 555 000 000"
+            required>
+        </label>
+
+        <label>
+          Пожелания
+          <textarea name="notes" rows="3" maxlength="500" placeholder="Например, столик у окна"></textarea>
+        </label>
+
+        <button class="submit" type="submit">
+          Проверить заявку
+          <span>→</span>
+        </button>
+
+
+
+        <div id="result" class="result" hidden aria-live="polite"></div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <a href="index.html">MICHELLE</a>
+    <span>Бишкек · ул. Аалы Токомбаева, 21/1</span>
+  </footer>
+
+  <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+        }
+    }
+    </script>
+
+  <script type="module" src="booking.js"></script>
+
+</body>
+
+</html>
