@@ -940,3 +940,76 @@ h2 {
     }
 
 }
+
+.mobile-booking {
+    display: none;
+}
+
+@media (max-width: 800px) {
+
+    .header {
+        z-index: 1000;
+    }
+
+    .menu-button {
+        position: relative;
+        z-index: 1002;
+    }
+
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+
+        margin: 0;
+        padding: 90px 25px 40px;
+
+        background: #263228;
+        color: #f4f1e8;
+
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: transform 0.4s ease, visibility 0.4s;
+        z-index: 1001;
+    }
+
+    .navigation.open {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    .navigation a {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 30px;
+        text-transform: none;
+        letter-spacing: 1px;
+    }
+
+    .navigation .mobile-booking {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px 25px;
+
+        border: 1px solid #f4f1e8;
+
+        font-family: "Manrope", sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        text-align: center;
+    }
+
+    .navigation .mobile-booking:hover {
+        background: #f4f1e8;
+        color: #263228;
+    }
+}
+
